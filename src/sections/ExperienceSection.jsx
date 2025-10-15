@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import TitleHeader from '../components/HeroModels/TitleHeader'
 import { expCards } from '../constants'
 import GlowCard from '../components/GlowCard'
@@ -10,7 +10,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 const ExperienceSection = () => {
 
+  const timelineRef = useRef(null)
+  
   useGSAP(() => {
+    gsap.utils.toArray('.timeline-card').forEach((card) => {
+      gsap.from(card, {
+        xPercent: -100,
+        opacity: 0,
+        transformOrigin: 'left left',
+        duration: 1, 
+        ease: 'power2.inOut', 
+        scrollTrigger: {
+          trigger: card, 
+          start: 'top 80%'
+        }
+      })
+    })
     gsap.to('.timeline', {
       transformOrigin: 'bottom bottom', 
       ease: 'power1.inOut',
@@ -38,6 +53,7 @@ const ExperienceSection = () => {
       })
     })
   }, [])
+
 
   return (
     <section id="experience" className="w-full md:mt-40 mt-20 section-padding xl:px-0">
