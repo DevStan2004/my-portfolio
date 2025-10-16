@@ -20,6 +20,7 @@ const ContactRoom = () => {
         shadow-camera-bottom={-10}
         shadow-camera-near={0.1}
         shadow-camera-far={20}
+        color="#fff4e6"
         />
 
         <spotLight
