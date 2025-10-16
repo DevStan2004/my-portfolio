@@ -18,7 +18,8 @@ const TechIcon = ({model}) => {
     <Canvas>
       <OrbitControls enableZoom={false} />
       <directionalLight position={[10, 10, 5]} intensity={2.5} />
-      <hemisphereLight intensity={0.5} groundColor="black" />
+      <directionalLight position={[10, 10, -5]} intensity={2.5} />
+      <hemisphereLight intensity={0.5} groundColor="white" />
 
       <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
         <group scale={model.scale} rotation={model.rotation}>

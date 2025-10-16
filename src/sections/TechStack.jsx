@@ -8,22 +8,6 @@ import { ScrollTrigger } from 'gsap/all'
 gsap.registerPlugin(ScrollTrigger);
 
 const TechStack = () => {
-    useGSAP(() => {
-        const cards = gsap.utils.toArray('.card-border')
-        cards.forEach((card, index) => {
-            gsap.from(card, {
-                yPercent: 100, 
-                opacity: 0, 
-                duration: 1, 
-                delay: 0.01 * index,
-                ease: 'power1.inOut', 
-                scrollTrigger: {
-                    trigger: '#skills', 
-                    start: 'top center',
-                }
-            })
-        })
-    }, [])
   return (
     <div id="skills" className="flex-center section-padding">
         <div className='w-full h-full md:px-10 px-5'>
