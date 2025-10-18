@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { Environment, Float, OrbitControls, useGLTF } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
 const TechIcon = ({model}) => {
     const scene = useGLTF(model.modelPath)
+    const texture = useLoader(THREE.TextureLoader, '/images/textures/nextTexture.jpg')
+    console.log(texture)
     useEffect(() => {
         if(model.name === 'Interactive Developer') {
             scene.scene.traverse((child) => {
@@ -12,6 +14,19 @@ const TechIcon = ({model}) => {
                     child.material = new THREE.MeshStandardMaterial({color: 'white'})
                 }
             })
+        } else if(model.name === 'JavaScript Developer') {
+          scene.scene.traverse((child) => {
+            if(child.isMesh && child.name === 'Text') {
+              child.material = new THREE.MeshStandardMaterial({color: 'yellow', roughness: 0})
+            }
+          })
+        } else if(model.name === 'Next JS Developer') {
+          scene.scene.traverse((child) => {
+            console.log(child)
+            if(child.isMesh) {
+              child.material = new THREE.MeshStandardMaterial({roughness: 0, map: texture})
+            }
+          })
         }
     })
   return (
@@ -20,6 +35,7 @@ const TechIcon = ({model}) => {
       <directionalLight position={[10, 10, 5]} intensity={2.5} />
       <directionalLight position={[10, 10, -5]} intensity={2.5} />
       <hemisphereLight intensity={0.5} groundColor="white" />
+      <spotLight intensity={1} angle={2} />
 
       <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
         <group scale={model.scale} rotation={model.rotation}>

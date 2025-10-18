@@ -9,7 +9,7 @@ import { Avatar } from './Avatar'
 
 const Contact = () => {
   return (
-    <section id="contact" className='flex-center section-padding'>
+    <section id="contact" className='flex-center my-20'>
         <div className="w-full h-full md:px-10 px-5">
             <TitleHeader title="Get In Touch With Me" sub="📞 Contact Information" />
             <div className="mt-5">

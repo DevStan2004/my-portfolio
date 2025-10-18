@@ -5,6 +5,11 @@
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
+::-webkit-scrollbar{
+  -webkit-appearance: none;
+  display: none;
+}
+
 html,
 body {
   width: 100dvw;
@@ -372,7 +377,7 @@ section {
     #62e0ff 25%,
     #52aeff 37.51%,
     #fd5c79 62.83%,
-    #6d45ce 92.91%
+    #d24e01 92.91%
   );
 }
 

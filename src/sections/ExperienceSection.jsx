@@ -65,8 +65,11 @@ const ExperienceSection = () => {
               <div key={card.title} className='exp-card-wrapper'>
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}> 
-                    <div>
-                      <img src={card.imgPath} alt={card.title} />
+                    <div className='flex items-center space-x-2'>
+                      <div className='rounded-full overflow-hidden h-15 w-15'>
+                        <img src={card.imgPath} alt={card.title} />
+                      </div>
+                      <p className='text-white'>{card.companyName}</p>
                     </div>
                   </GlowCard>
                 </div>
@@ -77,7 +80,7 @@ const ExperienceSection = () => {
                       <div className='gradient-line w-1 h-full' />
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                      <div className="timeline-logo">
+                      <div className="timeline-logo overflow-hidden">
                         <img src={card.logoPath} alt='logo' />
                       </div>
                       <div>
