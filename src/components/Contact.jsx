@@ -5,7 +5,6 @@ import { Canvas } from '@react-three/fiber'
 import Particles from './HeroModels/Particles'
 import { OrbitControls } from '@react-three/drei'
 import ContactRoom from './Models/ContactRoom'
-import { Avatar } from './Avatar'
 
 const Contact = () => {
   return (

@@ -147,7 +147,7 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Stanley brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/vineafrica.jpg",
     logoPath: "/images/vineafrica.jpg",
     title: "Frontend Developer",
@@ -160,7 +160,7 @@ const expCards = [
     ],
   },
   {
-    review: "Adrian’s contributions to UGS (Uduakex Global Solution) have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Stanley's contributions to UGS (Uduakex Global Solution) have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/UGS.jpg",
     logoPath: "/images/UGS.jpg",
     title: "Frontend Developer",

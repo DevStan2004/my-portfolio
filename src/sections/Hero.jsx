@@ -9,6 +9,7 @@ import AnimatedCounter from '../components/AnimatedCounter'
 
 gsap.registerPlugin(SplitText)
 
+
 const Hero = () => {
 
     useGSAP(() => {
@@ -17,7 +18,7 @@ const Hero = () => {
             y: 100,
             opacity: 0,
             duration: 2, 
-            stagger: 0.2, 
+            stagger: 0.02, 
             ease: 'power3.inOut'
         })
     })

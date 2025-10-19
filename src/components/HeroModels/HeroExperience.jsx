@@ -1,16 +1,27 @@
-import { OrbitControls } from '@react-three/drei'
+import { Html, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import { Room } from './Room';
 import HeroLights from './HeroLights';
 import Particles from './Particles';
 
+const LoadingAnimation = () => {
+    return (
+        <Html center>
+            <div className="white text-center text-4xl">
+                <p>LOADING 3D PORTFOLIO...</p>
+            </div>
+        </Html>
+    )
+}
+
 const HeroExperience = () => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   return (
-    <Canvas camera={{position: [0, 0, 15], fov: 45}}>
+    <Canvas camera={{position: [0, 0, 15], fov: 45}} dpr={[1, 1.5]}>
+      <Suspense fallback={<LoadingAnimation />}>
         <OrbitControls
             enablePan={false}
             enableZoom={!isTablet}
@@ -24,6 +35,7 @@ const HeroExperience = () => {
         <group scale={isMobile ? 0.7 : 1} position={[0, -3.0, 0]} rotation={[0, -Math.PI / 4, 0]}>
             <Room />
         </group>
+      </Suspense>
     </Canvas>
   )
 }
