@@ -10,7 +10,7 @@ const LoadingAnimation = () => {
     return (
         <Html center>
             <div className="white text-center text-4xl">
-                <p>LOADING 3D PORTFOLIO...</p>
+                <p>LOADING...</p>
             </div>
         </Html>
     )

@@ -1,12 +1,13 @@
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import { Environment, OrbitControls } from '@react-three/drei'
+import { Canvas, useThree } from '@react-three/fiber'
 import React from 'react'
 import { Computer } from './Computer'
 import { OfficeComputer } from '../OfficeComputer'
 
 const ContactRoom = () => {
+  // const {viewport} = useThree()
   return (
-    <Canvas className='bg-[#686868]' camera={{ position: [0, 10, 10], fov: 75, near: 0.1, far: 40 }} shadows >
+    <Canvas className='bg-[#686868]' camera={{ position: [0, 20, 20], fov: 10, near: 1, far: 50 }} shadows >
       <ambientLight intensity={1} color="#fff4e6" />
       <directionalLight 
         position={[5, 5, 3]} 
@@ -43,7 +44,7 @@ const ContactRoom = () => {
         shadow-camera-far={20}
         />
       <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 4} maxPolarAngle={Math.PI /2} />
-      <group scale={0.03} position={[0, -1.8, -2]} rotation={[0, -Math.PI /2, 0]}>
+      <group position={[0, -2.5, -2]} rotation={[0, -Math.PI /2, 0]}>
           <OfficeComputer />
       </group>
       <group scale={1}>
@@ -52,7 +53,6 @@ const ContactRoom = () => {
               <meshStandardMaterial color='#a46b2d' />
           </mesh>
       </group>
-
     </Canvas>
   )
 }

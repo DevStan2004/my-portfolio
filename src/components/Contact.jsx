@@ -30,7 +30,7 @@ const Contact = () => {
                     </label>
                     <Button text="Send message &rarr;" />
                 </div>
-                <div className="absolute top-0 left-0 w-full h-full">
+                <div className="absolute top-0 left-0 shrink-0 w-full h-full">
                     <Canvas>
                         <OrbitControls />
                         <Particles count={500} />
