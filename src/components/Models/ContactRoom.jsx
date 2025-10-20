@@ -7,7 +7,7 @@ import { OfficeComputer } from '../OfficeComputer'
 const ContactRoom = () => {
   // const {viewport} = useThree()
   return (
-    <Canvas className='bg-[#686868]' camera={{ position: [0, 20, 20], fov: 10, near: 1, far: 50 }} shadows >
+    <Canvas className='bg-[#686868] md:h-auto h-[50%]' camera={{ position: [0, 20, 20], fov: 10, near: 1, far: 50 }} shadows >
       <ambientLight intensity={1} color="#fff4e6" />
       <directionalLight 
         position={[5, 5, 3]} 
