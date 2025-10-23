@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({ text, className, id }) => {
   return (
-    <a 
+    <button 
         // onClick={(e) => {
         //     e.preventDefault();
         //     const target = document.getElementById('counter');
@@ -13,15 +13,15 @@ const Button = ({ text, className, id }) => {
         //         window.scrollTo({top, behavior: 'smooth'})
         //     }
         // }}
-    href="#counter" className={`${className ?? ''} cta-wrapper`}>
-        <div className="cta-button group">
+     className={`${className ?? ''} cta-wrapper w-full`}>
+        <div className="cta-button group w-full">
             <div className="bg-circle" />
             <p className="text">{text}</p>
             <div className="arrow-wrapper">
                 <img src='/images/arrow-down.svg' alt='arrow' />
             </div>
         </div>
-    </a>
+    </button>
   )
 }
 

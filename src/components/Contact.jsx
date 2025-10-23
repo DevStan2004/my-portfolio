@@ -15,7 +15,7 @@ const Contact = () => {
                 <p className="text-center">Feel free to reach out for collaborations, questions, or just to say hello!</p>
             </div>
             <div className="mt-16 bg-[#0E0E10] rounded-xl grid grid-cols-1 md:grid-cols-2 gap-3 relative">
-                <div className="rounded-3xl p-10">
+                <form action="https://formsubmit.co/stanleyatabiishabor@gmail.com" method="POST" className="rounded-3xl p-10">
                     <label htmlFor="name" className=' relative z-2' >
                         <p className='text-[#D9ECFF] mb-2'>Your Name</p>
                         <input type="text" name="name" placeholder="What's your beautiful name" id="name" className="mb-4 w-full bg-[#2D2D38] p-2 rounded-md outline-none border-none" />
@@ -29,7 +29,7 @@ const Contact = () => {
                         <textarea name="message" id="message" rows={5} className="mb-4 w-full bg-[#2D2D38] p-2 rounded-md outline-none border-none"></textarea>
                     </label>
                     <Button text="Send message &rarr;" />
-                </div>
+                </form>
                 <div className="absolute top-0 left-0 shrink-0 w-full h-full">
                     <Canvas>
                         <OrbitControls />
